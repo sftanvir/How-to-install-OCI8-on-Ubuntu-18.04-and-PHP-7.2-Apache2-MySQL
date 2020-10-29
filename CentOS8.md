@@ -69,4 +69,4 @@ To check is the installation is okay, run
 php -m | grep 'oci8'
 ```
 If ot shows **oci8** then you are good to go.
-Follow the steos as you like.
+Follow the steps as you like.
