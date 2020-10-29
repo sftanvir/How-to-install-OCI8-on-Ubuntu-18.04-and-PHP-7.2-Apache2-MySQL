@@ -32,7 +32,7 @@ Update the channel
 ```
 pecl channel-update pecl.php.net
 ```
-Install OCI8 for the php 7:
+#### Install OCI8 for the php 7:
 ```
 pecl install oci8
 ```
@@ -51,7 +51,7 @@ php -m | grep 'oci8'
 ```
 If ot shows **oci8** then you are good to go.
 
-Install OCI8 for the php 5:
+#### Install OCI8 for the php 5:
 ```
 pecl install oci8-2.0.12
 ```
