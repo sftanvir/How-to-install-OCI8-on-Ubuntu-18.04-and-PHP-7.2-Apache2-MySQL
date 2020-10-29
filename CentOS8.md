@@ -9,6 +9,13 @@ The location of the php.ini is as follows:
 > - php 7.2: /www/server/php/72/etc/php.ini
 > - php 5.6: /www/server/php/56/etc/php.ini
 
+```seq
+Andrew->China: Says Hello 
+Note right of China: China thinks\nabout it 
+China-->Andrew: How are you? 
+Andrew->>China: I am good thanks!
+```
+
 Make directory and enter in it
 ```
 mkdir /opt/oracle
