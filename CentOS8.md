@@ -10,10 +10,18 @@ The location of the php.ini is as follows:
 > - php 5.6: /www/server/php/56/etc/php.ini
 
 Make directory and enter in it
-`mkdir /opt/oracle
+```
+mkdir /opt/oracle
 cd /opt/oracle`
+```
+Download the  oracle-instantclient basic and  oracle-instantclient devel
+Use ful link: [yum.oracle.com](https://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient/x86_64/getPackage/ "yum.oracle.com")
+
+``
 wget https://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient/x86_64/getPackage/oracle-instantclient19.9-basic-19.9.0.0.0-1.x86_64.rpm
-wget https://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient/x86_64/getPackage/oracle-instantclient19.9-devel-19.9.0.0.0-1.x86_64.rpm
+
+wget https://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient/x86_64/getPackage/oracle-instantclient19.9-devel-19.9.0.0.0-1.x86_64.rpm`
+```
 yum install oracle-instantclient19.9-basic-19.9.0.0.0-1.x86_64.rpm
 yum install oracle-instantclient19.9-devel-19.9.0.0.0-1.x86_64.rpm
 pecl channel-update pecl.php.net
@@ -30,3 +38,5 @@ echo "extension =oci8.so" >> /www/server/php/56/etc/php.ini
 sudo sh -c "echo /usr/lib/oracle/19.9/client64/lib > /etc/ld.so.conf.d/oracle.conf"
 ldconfig
 php -m | grep 'oci8'
+
+[1]: https://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient/x86_64/getPackage/ "Yum Oracle"
