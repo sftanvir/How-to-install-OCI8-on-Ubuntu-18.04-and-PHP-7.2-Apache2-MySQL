@@ -1,0 +1,15 @@
+https://stackoverflow.com/questions/37027457/php-with-mssql-not-installing-in-centos-7
+
+
+sudo su
+curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+exit
+sudo ACCEPT_EULA=Y yum install msodbcsql
+sudo yum install unixODBC-devel
+yum groupinstall "Development Tools"
+sudo pecl install sqlsrv pdo_sqlsrv
+sudo echo "extension= pdo_sqlsrv.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
+sudo echo "extension= sqlsrv.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
+
+yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum install php-mssql  
